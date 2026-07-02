@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ TVLAR - Perguntas Frequentes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --azul:#0e375c;
+  --azul-claro:#1a4f7a;
+  --azul-hover:#0a2a47;
+  --violeta:#7c3aed;
+  --rosa:#ec4899;
+  --gradiente:linear-gradient(135deg,#0e375c 0%,#7c3aed 50%,#ec4899 100%);
+  --gradiente-hover:linear-gradient(135deg,#0a2a47 0%,#6d28d9 50%,#db2777 100%);
+  --branco:#ffffff;
+  --cinza-claro:#f4f6f8;
+  --cinza:#e2e8f0;
+  --cinza-escuro:#475569;
+  --texto:#1e293b;
+  --sombra:0 4px 12px rgba(14,55,92,0.08);
+  --sombra-hover:0 8px 24px rgba(124,58,237,0.18);
+  --radius:12px;
+  --progress-height:6px;
+}
+[data-tema="escuro"]{
+  --azul:#3b6b96;
+  --azul-claro:#4d7da8;
+  --azul-hover:#2a5278;
+  --violeta:#9d6df0;
+  --rosa:#f472b6;
+  --gradiente:linear-gradient(135deg,#1a3f5c 0%,#6d28d9 50%,#db2777 100%);
+  --gradiente-hover:linear-gradient(135deg,#15304a 0%,#5b21b6 50%,#be185d 100%);
+  --branco:#1a1f2e;
+  --cinza-claro:#242b3d;
+  --cinza:#2d3548;
+  --cinza-escuro:#94a3b8;
+  --texto:#e2e8f0;
+  --sombra:0 4px 12px rgba(0,0,0,0.3);
+  --sombra-hover:0 8px 24px rgba(0,0,0,0.4);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Plus Jakarta Sans', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  background:var(--cinza-claro);
+  color:var(--texto);
+  line-height:1.6;
+  transition:background .3s,color .3s;
+}
+/* HEADER */
+.sticky-header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgba(14,55,92,0.06);
+}
+header{
+  background:var(--branco);
+  color:var(--texto);
+  padding:1rem 1.5rem;
+  border-bottom:1px solid var(--cinza);
+  transition:background .3s,color .3s,border-color .3s;
+}
+.header-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:1rem;
+}
+.logo-link{
+  display:flex;align-items:center;
+  text-decoration:none;
+  cursor:pointer;
+}
+.logo-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+.theme-toggle{
+  background:transparent;
+  border:1px solid var(--cinza);
+  color:var(--texto);
+  padding:.5rem .9rem;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:.9rem;
+  transition:all .2s;
+  display:inline-flex;
+  align-items:center;
+  gap:0.5rem;
+}
+.theme-toggle:hover{
+  background:var(--cinza-claro);
+  border-color:var(--violeta);
+  color:var(--violeta);
+  transform:translateY(-1px);
+}
+.theme-toggle svg {
+  stroke: currentColor;
+  fill: none;
+}
+/* NAV */
+nav{
+  background:var(--branco);
+  border-bottom:1px solid var(--cinza);
+  transition:background .3s,border-color .3s;
+}
+.nav-inner{
+  max-width:1200px;
+  margin:0 auto;
+  display:flex;
+  gap:.4rem;
+  padding:.5rem;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.nav-item{
+  white-space:nowrap;
+  padding:.6rem 1rem;border-radius:8px;cursor:pointer;
+  color:var(--cinza-escuro);font-size:.9rem;font-weight:600;
+  transition:all .2s;border:none;background:transparent;
+  display:inline-flex;
+  align-items:center;
+  gap:0.4rem;
+}
+.nav-item:hover{background:var(--cinza-claro);color:var(--violeta);}
+.nav-item.active{background:var(--rosa);color:#fff;box-shadow:0 2px 8px rgba(236,72,153,.35);}
+.nav-item svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+/* SEARCH */
+.search-wrap{max-width:1200px;margin:1.5rem auto 0;padding:0 1rem;}
+.search-box{
+  width:100%;padding:1rem 1.2rem;font-size:1rem;border:2px solid var(--cinza);
+  border-radius:var(--radius);background:var(--branco);color:var(--texto);
+  transition:border .2s,box-shadow .2s,background .3s,color .3s;
+}
+.search-box:focus{outline:none;border-color:var(--violeta);box-shadow:0 0 0 3px rgba(124,58,237,.15);}
+/* PROGRESS */
+.progress-container{
+  max-width:1200px;margin:1rem auto 0;padding:0 1rem;display:flex;align-items:center;gap:1rem;
+}
+.progress-text{font-weight:600;font-size:.9rem;color:var(--azul);}
+.progress-bar{
+  flex:1;height:var(--progress-height);background:var(--cinza);border-radius:10px;overflow:hidden;
+}
+.progress-fill{
+  height:100%;width:0%;background:var(--gradiente);border-radius:10px;transition:width .3s;
+}
+/* HISTORY */
+.history-container{
+  max-width:1200px;margin:.5rem auto 0;padding:0 1rem;display:flex;align-items:center;flex-wrap:wrap;gap:.5rem;font-size:.85rem;color:var(--cinza-escuro);
+}
+.history-label{font-weight:600;}
+.history-chip{
+  background:var(--cinza);border-radius:20px;padding:.2rem .8rem;cursor:pointer;transition:background .2s,color .2s;
+  white-space:nowrap;
+  display:inline-flex;
+  align-items:center;
+  gap:0.4rem;
+}
+.history-chip:hover{background:var(--violeta);color:#fff;}
+.history-chip svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+}
+/* EXPORT */
+.export-buttons{
+  max-width:1200px;margin:.8rem auto 0;padding:0 1rem;display:flex;gap:.5rem;flex-wrap:wrap;
+}
+.export-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  background:var(--branco);border:1px solid var(--cinza);color:var(--texto);
+  padding:.5rem 1rem;border-radius:8px;cursor:pointer;font-size:.9rem;font-weight:600;
+  transition:all .2s;text-decoration:none;
+}
+.export-btn:hover{background:var(--cinza-claro);border-color:var(--violeta);color:var(--violeta);}
+.export-btn svg {
+  stroke: currentColor;
+  fill: none;
+}
+/* MAIN */
+main{max-width:1200px;margin:0 auto;padding:0 1rem 4rem;}
+.section-title{
+  display:flex;align-items:center;gap:.75rem;
+  font-size:1.6rem;color:var(--azul);margin:2rem 0 1rem;font-weight:700;
+}
+.section-title .icon{
+  display:inline-flex;
+  align-items:center;
+}
+.section-title svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
+.faq-item{
+  background:var(--branco);border:1px solid var(--cinza);border-radius:var(--radius);
+  margin-bottom:.8rem;overflow:hidden;box-shadow:var(--sombra);
+  transition:box-shadow .2s,transform .2s,border-color .2s;
+}
+.faq-item:hover{box-shadow:var(--sombra-hover);border-color:var(--violeta);}
+.faq-item.read{border-left:4px solid var(--violeta);}
+.faq-question{
+  width:100%;text-align:left;padding:1.1rem 1.3rem;background:transparent;border:none;
+  cursor:pointer;font-size:1.05rem;font-weight:600;color:var(--texto);
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+}
+.faq-question:hover{color:var(--azul);}
+.faq-question .chev{transition:transform .3s;color:var(--violeta);display:inline-flex;align-items:center;}
+.faq-item.open .faq-question .chev{transform:rotate(180deg);color:var(--rosa);}
+.faq-answer{
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out, padding 0.3s ease-out;
+  overflow:hidden;
+  padding:0 1.3rem;color:var(--cinza-escuro);font-size:.98rem;
+}
+.faq-item.open .faq-answer{
+  grid-template-rows: 1fr;
+  padding:0 1.3rem 1.2rem;
+}
+.faq-answer-inner {
+  min-height:0;
+}
+.faq-answer ul{margin:.5rem 0 .5rem 1.3rem;}
+.faq-answer li{margin:.3rem 0;}
+.faq-answer strong{color:var(--azul);}
+.feedback-row{
+  display:flex;align-items:center;gap:0.75rem;margin-top:1rem;padding-top:.75rem;border-top:1px solid var(--cinza);
+  font-size:.85rem;color:var(--cinza-escuro);
+}
+.feedback-row span{display:inline-flex;align-items:center;gap:.3rem;}
+.feedback-row .feedback-btn {
+  cursor:pointer;padding:.25rem .6rem;border-radius:6px;transition:all .2s;
+  background: var(--cinza-claro);
+  border: 1px solid var(--cinza);
+  color: var(--texto);
+}
+.feedback-row .feedback-btn:hover{background:var(--cinza);color:var(--violeta);border-color:var(--violeta);}
+.feedback-row .feedback-btn svg {
+  stroke: currentColor;
+  fill: none;
+}
+.feedback-thanks{color:var(--violeta);font-weight:600;display:none;}
+.no-results{text-align:center;padding:3rem;color:var(--cinza-escuro);font-size:1.1rem;display:none;}
+/* FLOATING BUTTON */
+.float-btn{
+  position:fixed;bottom:24px;right:24px;z-index:200;
+  background:var(--gradiente);color:#fff;border:none;cursor:pointer;
+  padding:1rem 1.4rem;border-radius:50px;font-size:.95rem;font-weight:700;
+  box-shadow:0 6px 20px rgba(124,58,237,.4);display:inline-flex;align-items:center;gap:.5rem;
+  transition:transform .2s,box-shadow .2s;
+}
+.float-btn:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(236,72,153,.45);}
+.float-btn svg {
+  stroke: currentColor;
+  fill: none;
+}
+/* MODAL */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:300;
+  display:none;align-items:center;justify-content:center;padding:1rem;
+  animation:fadeIn .2s;
+}
+.modal-overlay.show{display:flex;}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.modal{
+  background:var(--branco);border-radius:var(--radius);max-width:560px;width:100%;
+  padding:2rem;box-shadow:0 20px 60px rgba(0,0,0,.3);animation:slideUp .3s;
+  max-height:90vh;overflow-y:auto;
+}
+@keyframes slideUp{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal h3{color:var(--azul);margin-bottom:.5rem;font-size:1.3rem;}
+.modal p{color:var(--cinza-escuro);margin-bottom:1.2rem;font-size:.92rem;}
+.modal label{display:block;font-weight:600;margin-bottom:.4rem;font-size:.9rem;color:var(--texto);}
+.modal input,.modal select,.modal textarea{
+  width:100%;padding:.7rem .9rem;margin-bottom:1rem;border:1px solid var(--cinza);
+  border-radius:8px;background:var(--cinza-claro);color:var(--texto);font-size:.95rem;
+  transition: all 0.2s;
+}
+.modal input:focus,.modal select:focus,.modal textarea:focus{outline:none;border-color:var(--violeta);box-shadow:0 0 0 3px rgba(124,58,237,.12);background: var(--branco);}
+.modal textarea{resize:vertical;min-height:80px;}
+.modal-actions{display:flex;gap:.8rem;justify-content:flex-end;margin-top:.5rem;}
+.btn{padding:.7rem 1.3rem;border-radius:8px;border:none;cursor:pointer;font-weight:600;font-size:.95rem;transition:all .2s;}
+.btn-primary{background:var(--gradiente);color:#fff;}
+.btn-primary:hover{background:var(--gradiente-hover);transform:translateY(-1px);box-shadow:0 4px 14px rgba(124,58,237,.35);}
+.btn-secondary{background:var(--cinza);color:var(--texto);}
+.btn-secondary:hover{background:var(--cinza-claro);}
+.form-success{
+  display:none;text-align:center;padding:1.5rem .5rem;
+  font-size:1.05rem;font-weight:600;color:var(--azul);
+}
+.form-success.show{display:block;}
+/* FOOTER */
+footer{
+  background:var(--gradiente);color:#fff;padding:2.5rem 1.5rem 1.5rem;margin-top:2rem;
+  position: relative;
+}
+.footer-logo-wrapper {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.footer-logo {
+  width: 100px;
+  height: auto;
+  display: block;
+}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;}
+.footer-col h4{font-size:1.1rem;margin-bottom:1rem;border-bottom:2px solid rgba(255,255,255,.25);padding-bottom:.5rem;}
+.footer-col p,.footer-col a{color:#f1e6f5;text-decoration:none;font-size:.9rem;display:block;margin-bottom:.5rem;}
+.footer-col a:hover{color:#fff;text-decoration:underline;}
+.share-box{
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
+  border-radius:10px;padding:1rem;margin-top:1rem;
+}
+.share-box h5{font-size:.95rem;margin-bottom:.6rem;color:#fff;}
+.share-box p{font-size:.82rem;color:#f1e6f5;margin-bottom:.6rem;}
+.share-row{display:flex;flex-wrap:wrap;gap:.5rem;}
+.share-btn{
+  background:rgba(255,255,255,.2);color:#fff;border:1px solid rgba(255,255,255,.3);
+  padding:.5rem .9rem;border-radius:8px;cursor:pointer;font-size:.82rem;font-weight:600;
+  text-decoration:none;transition:background .2s,transform .2s;
+}
+.share-btn:hover{background:rgba(255,255,255,.35);transform:translateY(-1px);}
+.footer-bottom{text-align:center;border-top:1px solid rgba(255,255,255,.2);margin-top:2rem;padding-top:1rem;font-size:.85rem;color:#e9d5f0;}
+
+/* ACCESSIBILITY & SEO */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  header{padding:.8rem 1rem;}
+  .header-inner{justify-content:space-between;}
+  .logo-img { height: 32px; }
+  .nav-inner{flex-wrap:nowrap;overflow-x:auto;}
+  .section-title{font-size:1.3rem;}
+  .float-btn{padding:.8rem 1.1rem;font-size:.85rem;bottom:16px;right:16px;}
+  .faq-question{font-size:.98rem;padding:1rem;}
+  .footer-logo-wrapper { padding: 6px 10px; }
+  .footer-logo { width: 80px; }
+}
+@media(max-width:480px){
+  .modal{padding:1.5rem;}
+  .float-btn span.label{display:none;}
+  .float-btn{padding:1rem;border-radius:50%;}
+  .logo-img { height: 28px; }
+  .theme-toggle{padding:.45rem .7rem;font-size:.82rem;}
+  .footer-logo-wrapper { left:0.75rem; bottom:0.75rem; padding: 4px 8px; }
+  .footer-logo { width: 70px; }
+}
+
+/* PRINT OPTIMIZATION (PDF EXPORT) */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .sticky-header-wrapper,
+  .search-wrap,
+  .progress-container,
+  .history-container,
+  .export-buttons,
+  .float-btn,
+  .feedback-row,
+  footer {
+    display: none !important;
+  }
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+  .section-title {
+    margin-top: 1.5rem !important;
+    page-break-after: avoid;
+    color: #0e375c !important;
+  }
+  .faq-item {
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: none !important;
+    margin-bottom: 1rem !important;
+    page-break-inside: avoid;
+  }
+  .faq-answer {
+    grid-template-rows: 1fr !important;
+    padding: 0.5rem 1rem 1rem !important;
+    color: #334155 !important;
+  }
+  .faq-question {
+    padding: 0.75rem 1rem !important;
+    color: #0f172a !important;
+    font-weight: 700 !important;
+  }
+  .faq-question .chev {
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<h1 class="sr-only">FAQ TVLAR Empréstimos - Central de Ajuda Oficial</h1>
+
+<div class="sticky-header-wrapper">
+  <header>
+    <div class="header-inner">
+      <a href="#topo" class="logo-link" id="logoLink" aria-label="TVLAR Empréstimos - voltar ao topo">
+        <img src="logo-tvlar.png" alt="TVLAR Empréstimos" class="logo-img">
+      </a>
+      <div style="display: flex; gap: 0.5rem; align-items: center;">
+        <button class="theme-toggle" id="adminToggle" aria-label="Painel SAC" style="padding: 0; width: 36px; height: 36px; justify-content: center; border-radius: 50%;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <span class="theme-text">Modo Escuro</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner" id="navInner"></div>
+  </nav>
+</div>
+
+<div class="search-wrap">
+  <input type="text" class="search-box" id="searchBox" placeholder="🔍 Buscar pergunta ou palavra-chave...">
+</div>
+
+<div class="progress-container">
+  <span class="progress-text" id="progressText">0% visualizado</span>
+  <div class="progress-bar" id="progressBar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+</div>
+
+<div class="history-container" id="historyContainer">
+  <span class="history-label">📜 Jornadas visitadas:</span>
+  <div id="historyChips"></div>
+</div>
+
+<div class="export-buttons">
+  <button class="export-btn" id="exportTXT">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+    Exportar TXT
+  </button>
+  <button class="export-btn" id="exportPDF">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Exportar PDF
+  </button>
+</div>
+
+<main id="faqContainer"></main>
+<div class="no-results" id="noResults">Nenhuma pergunta encontrada para sua busca. 🤔</div>
+
+<button class="float-btn" id="floatBtn" aria-label="Solicitações, Dúvidas ou Reclamações">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  <span class="label">Solicitações/Dúvidas/Reclamações</span>
+</button>
+
+<div class="modal-overlay" id="adminPasswordOverlay">
+  <div class="modal" style="max-width: 400px;">
+    <h3>🔑 Acesso Restrito ao SAC</h3>
+    <p>Digite a senha de administrador para acessar o painel de monitoramento de chamados.</p>
+    <form id="adminLoginForm">
+      <label for="adminPassword">Senha *</label>
+      <input type="password" id="adminPassword" required placeholder="Digite a senha">
+      <div id="adminLoginError" style="color: var(--rosa); font-size: 0.85rem; margin-bottom: 1rem; display: none;">Senha incorreta. Tente novamente.</div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" id="adminPasswordClose">Cancelar</button>
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="adminPanel" style="display: none; max-width: 1200px; margin: 1.5rem auto; padding: 0 1rem;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+    <h2>📊 Painel do SAC - Monitoramento de Chamados</h2>
+    <button class="btn btn-secondary" id="btnBackToFaq">⬅️ Voltar ao FAQ</button>
+  </div>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+    <div style="background: var(--branco); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--cinza); text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: background .3s, border-color .3s;">
+      <h4 style="color: var(--cinza-escuro); margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase;">Total de Chamados</h4>
+      <p id="metricTotal" style="font-size: 2.2rem; font-weight: 800; color: var(--azul);">0</p>
+    </div>
+    <div style="background: var(--branco); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--cinza); text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: background .3s, border-color .3s;">
+      <h4 style="color: var(--cinza-escuro); margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase;">Pendente (Sem Resposta)</h4>
+      <p id="metricPendente" style="font-size: 2.2rem; font-weight: 800; color: var(--rosa);">0</p>
+    </div>
+    <div style="background: var(--branco); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--cinza); text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: background .3s, border-color .3s;">
+      <h4 style="color: var(--cinza-escuro); margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase;">Em Andamento</h4>
+      <p id="metricAndamento" style="font-size: 2.2rem; font-weight: 800; color: #eab308;">0</p>
+    </div>
+    <div style="background: var(--branco); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--cinza); text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: background .3s, border-color .3s;">
+      <h4 style="color: var(--cinza-escuro); margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase;">Resolvidos</h4>
+      <p id="metricResolvido" style="font-size: 2.2rem; font-weight: 800; color: #22c55e;">0</p>
+    </div>
+  </div>
+
+  <div style="background: var(--branco); padding: 1.2rem; border-radius: var(--radius); border: 1px solid var(--cinza); margin-bottom: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; transition: background .3s, border-color .3s;">
+    <div style="flex: 1; min-width: 250px;">
+      <input type="text" id="adminSearchBox" placeholder="🔍 Buscar por Protocolo, Nome ou Loja..." style="margin-bottom: 0; width: 100%; padding: 0.6rem 0.9rem; border: 1px solid var(--cinza); border-radius: 8px; background: var(--cinza-claro); color: var(--texto);">
+    </div>
+    <div>
+      <select id="adminStatusFilter" style="margin-bottom: 0; padding: 0.6rem 0.9rem; border: 1px solid var(--cinza); border-radius: 8px; background: var(--cinza-claro); color: var(--texto);">
+        <option value="todos">Todos os Status</option>
+        <option value="pendente">Pendente</option>
+        <option value="em andamento">Em Andamento</option>
+        <option value="resolvido">Resolvido</option>
+      </select>
+    </div>
+    <button class="btn btn-primary" id="adminReloadBtn" style="padding: 0.6rem 1.2rem;">🔄 Atualizar</button>
+  </div>
+
+  <div id="adminTicketList" style="display: grid; gap: 1rem; margin-bottom: 3rem;">
+    <div style="text-align: center; padding: 3rem; color: var(--cinza-escuro);">Nenhum chamado carregado ou cadastrado.</div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div id="modalFormContent">
+      <h3>📝 Solicitações, Dúvidas ou Reclamações</h3>
+      <p>Preencha os campos abaixo para registrar o seu chamado. Nosso SLA de resposta é de até <strong>48h de dias úteis</strong>.</p>
+      <form id="updateForm">
+        <label for="faqNome">Nome *</label>
+        <input type="text" id="faqNome" required placeholder="Seu nome completo">
+
+        <label for="faqMatricula">Matrícula *</label>
+        <input type="text" id="faqMatricula" required placeholder="Sua matrícula">
+
+        <label for="faqLoja">Loja *</label>
+        <input type="text" id="faqLoja" required placeholder="Sua loja de origem">
+
+        <label for="faqTipo">Tipo de Atendimento *</label>
+        <select id="faqTipo" required>
+          <option value="">Selecione...</option>
+          <option value="Solicitação">Solicitação</option>
+          <option value="Dúvida">Dúvida</option>
+          <option value="Reclamação">Reclamação</option>
+        </select>
+
+        <label for="faqDescricao">Descrição *</label>
+        <textarea id="faqDescricao" rows="4" required placeholder="Descreva aqui sua solicitação, dúvida ou reclamação..."></textarea>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" id="modalClose">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Enviar Chamado</button>
+        </div>
+      </form>
+    </div>
+    <div class="form-success" id="formSuccess">
+      <div style="text-align: center; padding: 1rem 0;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
+        <h3 style="margin-bottom: 0.5rem; color: var(--violeta);">Chamado Registrado!</h3>
+        <p style="margin-bottom: 1rem; font-size: 1.1rem; font-weight: bold;">Protocolo: <span id="protocoloGerado" style="color: var(--rosa);"></span></p>
+        <p style="margin-bottom: 1.5rem; color: var(--texto-suave);">Seu chamado foi preparado e enviado para atendimento.<br>Responderemos em até <strong>48h de dias úteis</strong>.</p>
+        <button type="button" class="btn btn-primary" onclick="document.getElementById('modalOverlay').classList.remove('show')">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo-wrapper">
+    <img src="logo-tvlar.png" alt="TVLAR" class="footer-logo">
+  </div>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>📞 Contatos TVLAR</h4>
+      <p>WhatsApp/SAC: <a href="https://wa.me/559236210400" target="_blank" style="color:#fff; text-decoration:underline;">(92) 3621-0400</a></p>
+      <p>Telefone: (92) 3621-0401</p>
+      <p>E-mail: atendimento@tvlar.com.br</p>
+      <p>Suporte Interno: <a href="https://wa.me/5592991587040" target="_blank" style="color:#fff; text-decoration:underline;">(92) 99158-7040</a></p>
+      <p>Responsável: Blenda Melo - (92) 99158-7040</p>
+      <p>E-mail Blenda: blenda.melo@tvlar.com.br</p>
+    </div>
+    <div class="footer-col">
+      <h4>🌐 Plataformas</h4>
+      <a href="https://operacional.mova.vc" target="_blank" rel="noopener">operacional.mova.vc</a>
+      <a href="https://tvlar.mova.vc" target="_blank" rel="noopener">tvlar.mova.vc</a>
+      <a href="https://parceiros.mova.vc" target="_blank" rel="noopener">parceiros.mova.vc</a>
+    </div>
+    <div class="footer-col">
+      <h4>🕒 Horário de Atendimento</h4>
+      <p>Segunda a Quinta: 08h às 18h</p>
+      <p>Sexta-feira: 08h às 17h</p>
+      <p>SAC: 0800 123 0132</p>
+      <p>Ouvidoria: 0800 123 0021</p>
+    </div>
+    <div class="footer-col">
+      <h4>💬 Atendimento</h4>
+      <a href="https://wa.me/559236210400" target="_blank" rel="noopener">WhatsApp SAC TVLAR</a>
+  <a href="mailto:atendimento@tvlar.com.br">E-mail SAC TVLAR</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © <span id="year"></span> TVLAR Empréstimos — FAQ oficial. Todos os direitos reservados.<br>
+    <small>Dica: salve este arquivo e envie via WhatsApp, e-mail ou hospede em qualquer servidor para compartilhar o link.</small>
+  </div>
+</footer>
+
+<script>
+// URL de Integração do Google Planilhas (Cole aqui o link do Apps Script)
+const GOOGLE_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbzBFS5oS6zvxsWCvYm9QVlBCCSiwaoAynnbDlUmtlBCzGtdrrtu3zyphDbhPRax5f_Aug/exec';
+
+// DADOS: 7 JORNADAS DA DOCUMENTAÇÃO OFICIAL TVLAR
+const dadosFAQ = [
+  { id: "jornada1", icon: `<svg xmlns="http://www.w3.org/2000/svg" class="journey-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>`, titulo: "1. Empréstimo/Crédito TVLAR", perguntas: [
+    { p: "Quem pode contratar o empréstimo?", r: "O crédito é destinado a pessoas físicas, clientes ou novos clientes da TVLAR, que possuam CPF regular, e-mail próprio e telefone celular ativo." },
+    { p: "Quais são os valores mínimo e máximo disponíveis?", r: "O valor mínimo para contratação é de <strong>R$ 500,00</strong> e o valor máximo é de <strong>R$ 5.000,00</strong>, sujeito à análise de crédito individual." },
+    { p: "Em quantas parcelas posso pagar?", r: "O parcelamento pode ser realizado em prazos de <strong>05 a 18 meses</strong>." },
+    { p: "Quais são as taxas e juros aplicados?", r: "As taxas de juros são personalizadas conforme o perfil do cliente e o prazo escolhido. O Custo Efetivo Total (CET) e a taxa mensal são apresentados detalhadamente no simulador antes da formalização." },
+    { p: "Onde e como recebo o dinheiro?", r: "O desembolso é realizado via PIX (chave CPF) ou transferência bancária para conta de titularidade do próprio solicitante. Não é permitido o depósito em contas de terceiros." },
+    { p: "Posso antecipar parcelas ou quitar o empréstimo?", r: "Sim. O cliente tem direito à antecipação do pagamento de parcelas ou quitação total com a respectiva redução proporcional dos juros." },
+    { p: "O que acontece em caso de atraso no pagamento?", r: "O atraso gera a incidência de multa de <strong>2%</strong> e juros de mora de <strong>1% ao mês</strong>, além da suspensão de novos créditos e possível negativação nos órgãos de proteção ao crédito." },
+    { p: "Qual a finalidade de uso do dinheiro?", r: "O crédito é de livre utilização (Crédito Pessoal), podendo ser usado para qualquer finalidade pelo cliente." },
+    { p: "Quais os requisitos técnicos para o cliente?", r: "É obrigatório possuir um smartphone com câmera (para selfie e fotos de documentos), e-mail válido e conta bancária (corrente ou poupança) em seu nome." },
+    { p: "O empréstimo está vinculado ao crediário da loja?", r: "Não. Trata-se de um produto financeiro distinto, operado via plataforma MOVA, embora a oferta ocorra dentro das lojas TVLAR." },
+    { p: "A contratação impacta o meu score de crédito?", r: "Sim, como qualquer operação financeira, a consulta e a pontualidade no pagamento influenciam o histórico de crédito do consumidor." },
+    { p: "Posso cancelar o empréstimo após a contratação?", r: "O cliente possui o direito de arrependimento em até <strong>7 dias</strong> após a assinatura, desde que devolva o valor total desembolsado acrescido de eventuais tributos (IOF) para nossa empresa parceiro MOVA." },
+    { p: "É possível ter múltiplos empréstimos simultâneos?", r: "A concessão de um novo empréstimo depende da margem de crédito disponível e do histórico de pagamento dos contratos vigentes." },
+    { p: "Clientes negativados podem contratar?", r: "A política de crédito realiza análise nos órgãos de proteção (SPC/Serasa). A existência de restrições é um fator impeditivo para a aprovação na plataforma." }
+  ]},
+  { id: "jornada2", icon: `<svg xmlns="http://www.w3.org/2000/svg" class="journey-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>`, titulo: "2. Fluxo de Contratação", perguntas: [
+    { p: "Como acessar a plataforma de operações MOVA?", r: "O acesso é feito pelo link <strong>operacional.mova.vc</strong> oficial da plataforma de parceiros, utilizando o navegador (preferencialmente Google Chrome)." },
+    { p: "Como realizar o primeiro acesso ou recuperar a senha?", r: "Para realizar o primeiro acesso à plataforma, siga as orientações abaixo:<br><ol><li>Acesse o portal: <strong>https://operacional.mova.vc/</strong></li><li>Na tela de login, clique na opção “Esqueci a senha”</li><li>Informe seu CPF e solicite a criação de uma nova senha</li><li>Verifique o e-mail cadastrado e clique no link recebido para redefinir a senha</li><li>Defina e confirme a senha definitiva de acesso</li><li>Retorne ao site <strong>https://operacional.mova.vc/</strong> e realize o login</li></ol>" },
+    { p: "O que é a operação assistida?", r: "É o processo onde o colaborador da TVLAR auxilia o cliente em todas as etapas da proposta dentro da loja, garantindo o preenchimento correto dos dados." },
+    { p: "Quais dados básicos são solicitados inicialmente?", r: "Número do celular com DDD e e-mail válido. Estes dados são cruciais para o envio de tokens e comunicações, além de documentação com foto." },
+    { p: "Como funciona o simulador?", r: "O operador acessa a plataforma <strong>operacional.mova.vc</strong>, acessa a tela de operação assistida e insere o CPF para a simulação. Após aprovação, a plataforma informa o valor disponível e apresenta as opções de parcelas, datas de vencimento e o valor de cada prestação." },
+    { p: "Como configurar o desembolso?", r: "Deve-se selecionar a opção PIX (chave CPF) ou inserir os dados bancários (Banco, Agência, Conta e Tipo de Conta)." },
+    { p: "Como é feito o envio de documentos?", r: "O sistema solicita fotos nítidas do documento de identidade (RG ou CNH) frente e verso, além de uma selfie do cliente para prova de vida, enviadas via link de biometria." },
+    { p: "Como acompanhar o status da operação?", r: "Na tela de \"Operações\", o status mudará de \"Em Análise\" para \"Aprovada\", \"Reprovada\" ou \"Aguardando Documentação\"." }
+  ]},
+  { id: "jornada3", icon: `<svg xmlns="http://www.w3.org/2000/svg" class="journey-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>`, titulo: "3. Plataforma Operacional MOVA", perguntas: [
+    { p: "Como funciona o Token de Segurança?", r: "Para ações críticas ou login em novos dispositivos, o sistema solicita um código enviado via SMS e e-mail para validar a identidade do operador." },
+    { p: "O que encontro na Tela de Operações?", r: "Uma listagem completa de todas as propostas iniciadas, permitindo visualizar o progresso de cada cliente em tempo real." },
+    { p: "Como utilizar os filtros e busca?", r: "É possível filtrar por período (data inicial e final), status da proposta ou buscar diretamente pelo CPF do cliente." },
+    { p: "Posso personalizar a visualização das colunas?", r: "Sim, a plataforma permite selecionar quais colunas devem aparecer na grade principal (ex: Valor, Data, Status, Nome) para facilitar a gestão." },
+    { p: "Como visualizar ou reenviar contratos?", r: "Acesse <strong>operacional.mova.vc</strong>, insira o CPF do cliente no campo cpf, id ou nome para identificar a proposta ativa do cliente. Após identificar, clique no status da proposta e vá em \"operacionais\". Abaixo haverá o box para marcação; logo em seguida, baixe o contrato e valide se os dados do e-mail estão corretos." },
+    { p: "É possível cancelar uma proposta em andamento?", r: "Sim, propostas que ainda não foram pagas podem ser canceladas pelo operador ou responsável da TVLAR Empréstimos, atualmente Blenda Melo, caso haja erro de digitação ou desistência imediata." },
+    { p: "Como funciona a gestão de usuários?", r: "A solicitação deve ser efetuada para Blenda Melo, ou pessoa responsável pela TVLAR Empréstimos, para a criação de usuário por meio da plataforma <strong>parceiros.mova.vc</strong>." }
+  ]},
+  { id: "jornada4", icon: `<svg xmlns="http://www.w3.org/2000/svg" class="journey-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>`, titulo: "4. Pagamentos e Recebíveis", perguntas: [
+    { p: "Como o cliente acessa a landing page de pagamentos?", r: "Através do link enviado via SMS/WhatsApp ou pelo portal do cliente <strong>tvlar.mova.vc</strong> ou pelo número de WhatsApp TVLAR <strong>(92) 3621-0400</strong>, informando o CPF e o nome." },
+    { p: "Como gerar boletos para pagamento?", r: "Direcionar para o SAC TVLAR <strong>(92) 3621-0400</strong>, ou instruir o cliente a acessar a plataforma <strong>tvlar.mova.vc</strong>." },
+    { p: "Quais as formas de pagamento aceitas?", r: "PIX (com baixa imediata) e Boleto Bancário (compensação em até 72 horas úteis)." },
+    { p: "Qual o prazo para o dinheiro cair na conta do cliente?", r: "Após a aprovação final e assinatura do contrato, o desembolso ocorre geralmente em até <strong>24 horas úteis</strong>." },
+    { p: "Como acompanhar o débito das parcelas?", r: "O cliente pode consultar seu extrato na plataforma <strong>tvlar.mova.vc</strong>, para verificar quais parcelas constam como \"Pagas\" ou \"Em Aberto\"." },
+    { p: "Como regularizar atrasos?", r: "O cliente deve gerar um novo boleto atualizado pelo portal <strong>tvlar.mova.vc</strong> ou pelo SAC TVLAR <strong>(92) 3621-0400</strong>, que já incluirá o cálculo automático de multa e juros." }
+  ]},
+  { id: "jornada5", icon: `<svg xmlns="http://www.w3.org/2000/svg" class="journey-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg>`, titulo: "5. Comissões", perguntas: [
+    { p: "Qual o percentual de comissão para a equipe de loja?", r: "A estrutura de comissionamento segue os percentuais abaixo sobre o valor líquido do empréstimo:<ul><li>Operador Comercial / Vendedor: 1,50%</li><li>Chefe de Salão: 1,50%</li><li>Gerente de Loja: 0,40%</li></ul>" },
+    { p: "Qual o período de apuração?", r: "A apuração é mensal, compreendendo as propostas pagas do primeiro ao último dia do mês vigente." },
+    { p: "Quando a comissão é paga?", r: "O pagamento ocorre mensalmente, seguindo o calendário todo dia 15 de cada mês." },
+    { p: "Como acompanhar minhas comissões?", r: "Os valores podem ser conferidos através dos relatórios de produtividade extraídos da plataforma MOVA, filtrando pelo ID do vendedor/operador. O operador deve entrar em contato com o suporte Gefin Blenda Melo, por meio do número <strong>(92) 99158-7040</strong>." }
+  ]},
+  { id: "jornada6", icon: `<svg xmlns="http://www.w3.org/2000/svg" class="journey-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2v3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>`, titulo: "6. Suporte e Contatos", perguntas: [
+    { p: "Qual o horário de atendimento do suporte técnico?", r: "O suporte operacional funciona de segunda a quinta-feira, das 08h às 18h, e sexta-feira das 08h às 17h (horário local)." },
+    { p: "Quais os canais de suporte disponíveis?", r: "<ul><li>WhatsApp Suporte: <strong>(92) 3621-0400</strong></li><li>E-mail: <strong>atendimento@tvlar.com.br</strong></li><li>Telefone: <strong>(92) 3621-0401</strong></li></ul>" },
+    { p: "Como abrir um chamado técnico?", r: "Ao identificar um erro no sistema, o operador deve printar a tela, anotar o CPF do cliente e abrir o chamado na plataforma <strong>parceiros.mova.vc</strong> descrevendo o ocorrido, inserindo o gerente e a Blenda Melo (<strong>blenda.melo@tvlar.com.br</strong>)." },
+    { p: "Como é definida a criticidade dos problemas?", r: "<ul><li><strong>Alta:</strong> Plataforma fora do ar ou erro no desembolso.</li><li><strong>Média:</strong> Erro na subida de documentos de um cliente específico.</li><li><strong>Baixa:</strong> Dúvidas sobre navegação ou relatórios.</li></ul>" },
+    { p: "Como acompanhar a resolução de um chamado?", r: "O suporte fornecerá um número de protocolo e manterá o operador informado via chat ou e-mail até a conclusão do caso." }
+  ]},
+  { id: "jornada7", icon: `<svg xmlns="http://www.w3.org/2000/svg" class="journey-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`, titulo: "7. Portal de Parceiros (parceiros.mova.vc)", perguntas: [
+    { p: "Como acessar o portal de parceiros?", r: "Acesse o link oficial: <strong>https://parceiros.mova.vc</strong>. Recomenda-se salvar este link nos favoritos do navegador para acesso rápido." },
+    { p: "Como fazer login no portal de parceiros?", r: "Clique no botão \"Entrar\" no canto superior direito da página. Informe seu e-mail e senha cadastrados. Se for o primeiro acesso, será necessário criar uma conta." },
+    { p: "Como criar uma nova conta no portal de parceiros?", r: "Na página de login, clique em \"Cadastre-se\". Preencha o nome completo e e-mail. Um e-mail de confirmação será enviado com instruções para definir sua senha. Siga as orientações para concluir o cadastro." },
+    { p: "Esqueci minha senha. Como recuperar?", r: "Na página de login, clique em \"Esqueceu a senha?\". Informe seu e-mail cadastrado e siga as instruções enviadas para redefinir sua senha." },
+    { p: "Quais as opções de login disponíveis?", r: "É possível fazer login com e-mail e senha, ou utilizar as integrações com Google ou Microsoft para acesso rápido." },
+    { p: "O que posso fazer após fazer login no portal?", r: "Após o login, você terá acesso a:<ul><li>Enviar uma solicitação (abrir novo chamado)</li><li>Solicitações (acompanhar chamados abertos por você)</li><li>Acompanhar solicitações em que você foi colocado em cópia</li><li>Acessar informações de contato</li><li>Alterar senha</li><li>Sair do seu login</li></ul>" },
+    { p: "Como enviar uma solicitação/abrir um chamado?", r: "Após fazer login, clique em \"Enviar uma solicitação\" no menu principal. Preencha os dados solicitados e descreva o problema ou dúvida com o máximo de detalhes possível." },
+    { p: "Como acompanhar minhas solicitções?", r: "No menu \"Solicitações\", você pode visualizar todos os chamados que abriu e acompanhar o status de cada um em tempo real." },
+    { p: "Posso acompanhar solicitações de outras pessoas?", r: "Sim, você pode acompanhar solicitações nas quais foi colocado em cópia pelo solicitante original." },
+    { p: "Quais são os outros contatos disponíveis?", r: "<ul><li><strong>SAC:</strong> 0800 123 0132</li><li><strong>Ouvidoria:</strong> 0800 123 0021</li><li><strong>Atendimento MOVA:</strong> Disponível no portal de parceiros</li></ul>" }
+  ]}
+];
+
+const container = document.getElementById('faqContainer');
+const navInner = document.getElementById('navInner');
+const noResults = document.getElementById('noResults');
+const searchBox = document.getElementById('searchBox');
+const progressText = document.getElementById('progressText');
+const progressFill = document.getElementById('progressFill');
+const historyChips = document.getElementById('historyChips');
+let totalQuestions = 0;
+let viewedQuestions = new Set();
+let visitHistory = [];
+
+function carregarProgresso() {
+  try {
+    const salvo = localStorage.getItem('viewedQuestions');
+    if (salvo) {
+      const array = JSON.parse(salvo);
+      viewedQuestions = new Set(array);
+    }
+  } catch (e) {
+    console.error("Erro ao carregar progresso", e);
+  }
+}
+
+function salvarProgresso() {
+  try {
+    localStorage.setItem('viewedQuestions', JSON.stringify(Array.from(viewedQuestions)));
+  } catch (e) {
+    console.error("Erro ao salvar progresso", e);
+  }
+}
+
+function contarPerguntasTotal() {
+  totalQuestions = 0;
+  dadosFAQ.forEach(s => totalQuestions += s.perguntas.length);
+}
+contarPerguntasTotal();
+
+function atualizarProgresso() {
+  const percent = totalQuestions > 0 ? Math.round((viewedQuestions.size / totalQuestions) * 100) : 0;
+  progressText.textContent = `${percent}% visualizado (${viewedQuestions.size} de ${totalQuestions})`;
+  progressFill.style.width = `${percent}%`;
+}
+
+function marcarVista(id) {
+  viewedQuestions.add(id);
+  salvarProgresso();
+  atualizarProgresso();
+}
+
+function renderNav(){
+  navInner.innerHTML = dadosFAQ.map(s =>
+    `<button class="nav-item" data-target="${s.id}">${s.icon} <span>${s.titulo.split(' (')[0].substring(3)}</span></button>`
+  ).join('');
+  navInner.querySelectorAll('.nav-item').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const el = document.getElementById('sec-'+btn.dataset.target);
+      if(el){
+        const top = el.getBoundingClientRect().top + window.pageYOffset - 150;
+        window.scrollTo({top, behavior:'smooth'});
+      }
+      navInner.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      adicionarAoHistorico(btn.dataset.target);
+    });
+  });
+}
+
+function renderFAQ(){
+  container.innerHTML = dadosFAQ.map(s => `
+    <section id="sec-${s.id}">
+      <h2 class="section-title"><span class="icon">${s.icon}</span> ${s.titulo}</h2>
+      ${s.perguntas.map((item, i) => {
+        const qId = `${s.id}-${i}`;
+        const isRead = viewedQuestions.has(qId);
+        return `
+        <div class="faq-item ${isRead ? 'read' : ''}" data-id="${qId}" data-search="${(item.p+' '+item.r).toLowerCase().replace(/<[^>]+>/g,' ')}">
+          <button class="faq-question" aria-expanded="false">
+            <span>${item.p}</span>
+            <svg class="chev" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              ${item.r}
+              <div class="feedback-row">
+                <span>Esta resposta foi útil?</span>
+                <span class="feedback-btn feedback-yes" data-id="${qId}">Sim</span>
+                <span class="feedback-btn feedback-no" data-id="${qId}">Não</span>
+                <span class="feedback-thanks" data-for="${qId}">Obrigado pelo feedback!</span>
+              </div>
+            </div>
+          </div>
+        </div>`;
+      }).join('')}
+    </section>
+  `).join('');
+
+  container.querySelectorAll('.faq-item').forEach(item => {
+    const btn = item.querySelector('.faq-question');
+    const qId = item.dataset.id;
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', !isOpen);
+      if (!isOpen) {
+        item.classList.add('read');
+        marcarVista(qId);
+      }
+    });
+    item.querySelector('.feedback-yes')?.addEventListener('click', (e) => { e.stopPropagation(); item.querySelector('.feedback-thanks').style.display = 'inline'; });
+    item.querySelector('.feedback-no')?.addEventListener('click', (e) => { e.stopPropagation(); item.querySelector('.feedback-thanks').style.display = 'inline'; });
+  });
+}
+
+function filtrar(termo){
+  termo = termo.toLowerCase().trim();
+  let visiveis = 0;
+  container.querySelectorAll('.faq-item').forEach(item => {
+    const match = item.dataset.search.includes(termo);
+    item.style.display = match ? '' : 'none';
+    if(match) visiveis++;
+  });
+  container.querySelectorAll('section').forEach(sec => {
+    const itens = sec.querySelectorAll('.faq-item');
+    let algumVisivel = false;
+    itens.forEach(i => { if(i.style.display !== 'none') algumVisivel = true; });
+    sec.style.display = algumVisivel ? '' : 'none';
+  });
+  noResults.style.display = visiveis === 0 ? 'block' : 'none';
+}
+
+function adicionarAoHistorico(id) {
+  visitHistory = visitHistory.filter(item => item !== id);
+  visitHistory.push(id);
+  if (visitHistory.length > 5) visitHistory.shift();
+  renderizarHistorico();
+}
+
+function renderizarHistorico() {
+  historyChips.innerHTML = visitHistory.map(id => {
+    const sec = dadosFAQ.find(s => s.id === id);
+    if (sec) {
+      return `<span class="history-chip" data-target="${id}">${sec.icon} <span>${sec.titulo.split(' (')[0].substring(3)}</span></span>`;
+    }
+    return '';
+  }).join('');
+  document.querySelectorAll('.history-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const el = document.getElementById('sec-'+chip.dataset.target);
+      if(el){
+        const top = el.getBoundingClientRect().top + window.pageYOffset - 150;
+        window.scrollTo({top, behavior:'smooth'});
+      }
+    });
+  });
+}
+
+function exportarTXT() {
+  let texto = 'FAQ TVLAR - Perguntas Frequentes\n\n';
+  dadosFAQ.forEach(sec => {
+    texto += `=== ${sec.titulo} ===\n\n`;
+    sec.perguntas.forEach((item, i) => {
+      texto += `Pergunta: ${item.p}\nResposta: ${item.r.replace(/<[^>]+>/g, '')}\n\n`;
+    });
+  });
+  const blob = new Blob([texto], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'FAQ_TVLAR.txt';
+  a.click();
+}
+
+function exportarPDF() { window.print(); }
+
+window.addEventListener('scroll', () => {
+  const pos = window.scrollY + 180;
+  let atual = null;
+  Array.from(document.querySelectorAll('main section')).forEach(sec => {
+    if(sec.offsetTop <= pos) atual = sec.id.replace('sec-','');
+  });
+  if(atual){
+    navInner.querySelectorAll('.nav-item').forEach(b => b.classList.toggle('active', b.dataset.target === atual));
+    adicionarAoHistorico(atual);
+  }
+});
+
+let adminTickets = []; // Armazena os chamados da planilha
+
+// Helper para requisições GET contornando CORS em arquivos locais (JSONP)
+function carregarDadosJSONP(url) {
+  return new Promise((resolve, reject) => {
+    const callbackName = 'googleSheetsCallback_' + Math.round(100000 * Math.random());
+    window[callbackName] = function(data) {
+      resolve(data);
+      document.body.removeChild(script);
+      delete window[callbackName];
+    };
+
+    const script = document.createElement('script');
+    const separator = url.includes('?') ? '&' : '?';
+    script.src = `${url}${separator}callback=${callbackName}&ts=${Date.now()}`;
+    script.onerror = function(err) {
+      reject(err);
+      document.body.removeChild(script);
+      delete window[callbackName];
+    };
+    document.body.appendChild(script);
+  });
+}
+
+// Busca chamados do Google Planilhas via JSONP (Bypassa CORS de arquivo local)
+async function carregarChamadosAdmin() {
+  const ticketListEl = document.getElementById('adminTicketList');
+  if (!GOOGLE_WEBAPP_URL) {
+    ticketListEl.innerHTML = `<div style="text-align: center; padding: 2rem; color: var(--rosa); font-weight: 600;">⚠️ Nenhuma URL de planilha configurada! Configure a constante GOOGLE_WEBAPP_URL no código do site.</div>`;
+    return;
+  }
+
+  ticketListEl.innerHTML = `<div style="text-align: center; padding: 3rem; color: var(--cinza-escuro);">
+    <svg class="loading-spinner" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="animation: spin 1s linear infinite; margin-bottom: 0.5rem;"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+    <div>Carregando chamados em tempo real...</div>
+  </div>
+  <style>
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+  </style>`;
+
+  try {
+    adminTickets = await carregarDadosJSONP(GOOGLE_WEBAPP_URL);
+    atualizarMetricasAdmin();
+    filtrarChamadosAdmin();
+  } catch (err) {
+    console.error(err);
+    ticketListEl.innerHTML = `<div style="text-align: center; padding: 2rem; color: var(--rosa);">⚠️ Falha ao carregar chamados da planilha. Verifique a conexão e as permissões de compartilhamento.</div>`;
+  }
+}
+
+// Atualiza cards de métricas
+function atualizarMetricasAdmin() {
+  const total = adminTickets.length;
+  const pendentes = adminTickets.filter(t => (t.status || '').toLowerCase() === 'pendente' || (t.status || '').toLowerCase() === 'em aberto').length;
+  const andamento = adminTickets.filter(t => (t.status || '').toLowerCase() === 'em andamento').length;
+  const resolvidos = adminTickets.filter(t => (t.status || '').toLowerCase() === 'resolvido').length;
+
+  document.getElementById('metricTotal').textContent = total;
+  document.getElementById('metricPendente').textContent = pendentes;
+  document.getElementById('metricAndamento').textContent = andamento;
+  document.getElementById('metricResolvido').textContent = resolvidos;
+}
+
+// Filtra chamados na tela
+function filtrarChamadosAdmin() {
+  const busca = document.getElementById('adminSearchBox').value.toLowerCase().trim();
+  const statusFiltro = document.getElementById('adminStatusFilter').value.toLowerCase();
+  const ticketListEl = document.getElementById('adminTicketList');
+
+  const filtrados = adminTickets.filter(t => {
+    const matchBusca = (t.protocolo || '').toLowerCase().includes(busca) || 
+                       (t.nome || '').toLowerCase().includes(busca) || 
+                       (t.loja || '').toLowerCase().includes(busca) ||
+                       (t.descricao || '').toLowerCase().includes(busca);
+    
+    let tStatus = (t.status || '').toLowerCase();
+    if (tStatus === 'em aberto') tStatus = 'pendente';
+    
+    const matchStatus = statusFiltro === 'todos' || tStatus === statusFiltro;
+    return matchBusca && matchStatus;
+  });
+
+  if (filtrados.length === 0) {
+    ticketListEl.innerHTML = `<div style="text-align: center; padding: 3rem; color: var(--cinza-escuro); background: var(--branco); border-radius: var(--radius); border: 1px solid var(--cinza); transition: background .3s, border-color .3s;">Nenhum chamado encontrado para os filtros selecionados.</div>`;
+    return;
+  }
+
+  ticketListEl.innerHTML = filtrados.map(t => {
+    let statusStyle = 'background: rgba(236,72,153,0.15); color: var(--rosa);';
+    let tStatus = (t.status || '').toLowerCase();
+    if (tStatus === 'em andamento') {
+      statusStyle = 'background: rgba(234,179,8,0.15); color: #eab308;';
+    } else if (tStatus === 'resolvido') {
+      statusStyle = 'background: rgba(34,197,94,0.15); color: #22c55e;';
+    }
+
+    // Calcular SLA de 48h úteis
+    let slaHtml = '';
+    if (tStatus !== 'resolvido') {
+      const dataCriacao = new Date(t.datahora);
+      if (!isNaN(dataCriacao.getTime())) {
+        const limiteSla = new Date(dataCriacao.getTime() + (48 * 60 * 60 * 1000));
+        const agora = new Date();
+        const diffMs = limiteSla - agora;
+        
+        if (diffMs > 0) {
+          const horas = Math.floor(diffMs / (1000 * 60 * 60));
+          const minutos = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+          slaHtml = `<span style="font-size: 0.85rem; font-weight: 600; color: #eab308; display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.3rem;">⏳ Responder em até ${horas}h ${minutos}m</span>`;
+        } else {
+          slaHtml = `<span style="font-size: 0.85rem; font-weight: 700; color: var(--rosa); display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.3rem;">⚠️ SLA Excedido! Resposta Atrasada</span>`;
+        }
+      }
+    } else {
+      slaHtml = `<span style="font-size: 0.85rem; font-weight: 600; color: #22c55e; display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.3rem;">✅ Respondido / SLA Concluído</span>`;
+    }
+
+    let dataExibicao = 'Data indisponível';
+    const dataObj = new Date(t.datahora);
+    if (!isNaN(dataObj.getTime())) {
+      dataExibicao = dataObj.toLocaleDateString('pt-BR') + ' às ' + dataObj.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+    }
+
+    const respTerceiros = t.respostadeterceiros ? t.respostadeterceiros.trim() : '';
+
+    return `
+      <div style="background: var(--branco); border: 1px solid var(--cinza); border-radius: var(--radius); padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); display: flex; flex-direction: column; gap: 0.8rem; transition: background .3s, border-color .3s; text-align: left;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; border-bottom: 1px solid var(--cinza); padding-bottom: 0.8rem;">
+          <div>
+            <strong style="color: var(--texto); font-size: 1.05rem;">${t.protocolo || 'SEM PROTOCOLO'}</strong>
+            <button onclick="navigator.clipboard.writeText('${t.protocolo || ''}'); alert('Protocolo copiado!');" style="background: none; border: none; cursor: pointer; color: var(--cinza-escuro); margin-left: 0.3rem;" title="Copiar Protocolo">📋</button>
+            <div style="font-size: 0.8rem; color: var(--cinza-escuro); margin-top: 0.1rem;">Criado em: ${dataExibicao}</div>
+          </div>
+          <span style="font-size: 0.8rem; font-weight: bold; padding: 0.4rem 0.8rem; border-radius: 20px; text-transform: uppercase; ${statusStyle}">${t.status || 'Pendente'}</span>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem; font-size: 0.9rem;">
+          <div>
+            <span style="color: var(--cinza-escuro); font-weight: 600;">Colaborador:</span>
+            <div style="color: var(--texto); margin-top: 0.1rem;">${t.nome || 'Não informado'} (Matrícula: ${t.matricula || 'N/A'})</div>
+          </div>
+          <div>
+            <span style="color: var(--cinza-escuro); font-weight: 600;">Loja:</span>
+            <div style="color: var(--texto); margin-top: 0.1rem;">${t.loja || 'Não informada'}</div>
+          </div>
+        </div>
+
+        <div>
+          <span style="color: var(--cinza-escuro); font-weight: 600; font-size: 0.9rem;">Demanda (${t.tipo || 'Chamado'}):</span>
+          <p style="color: var(--texto); font-size: 0.92rem; background: var(--cinza-claro); padding: 0.8rem 1rem; border-radius: 8px; margin-top: 0.3rem; border: 1px solid var(--cinza); line-height: 1.4; transition: background .3s, border-color .3s;">${t.descricao || 'Sem descrição.'}</p>
+        </div>
+
+        <div style="border-top: 1px dashed var(--cinza); padding-top: 0.8rem; display: flex; flex-direction: column; gap: 0.3rem;">
+          <div>
+            <span style="color: var(--cinza-escuro); font-weight: 600; font-size: 0.9rem;">Resposta de Terceiros / SAC:</span>
+            <p style="color: ${respTerceiros ? 'var(--texto)' : 'var(--cinza-escuro)'}; font-style: ${respTerceiros ? 'normal' : 'italic'}; font-size: 0.9rem; margin-top: 0.2rem;">
+              ${respTerceiros ? `💬 ${respTerceiros}` : '⏳ Nenhuma resposta de terceiros cadastrada na planilha ainda.'}
+            </p>
+          </div>
+          ${slaHtml}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  carregarProgresso();
+  renderNav();
+  renderFAQ();
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('logoLink').addEventListener('click', e => { e.preventDefault(); window.scrollTo({top:0, behavior:'smooth'}); });
+
+  // Logo clique -> topo
+  document.getElementById('logoLink').addEventListener('click', e => {
+    e.preventDefault();
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // Tema com persistência
+  const themeToggle = document.getElementById('themeToggle');
+  
+  function aplicarTema(tema) {
+    if (tema === 'escuro') {
+      document.documentElement.setAttribute('data-tema', 'escuro');
+      themeToggle.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        <span class="theme-text">Modo Claro</span>
+      `;
+      localStorage.setItem('theme', 'escuro');
+    } else {
+      document.documentElement.removeAttribute('data-tema');
+      themeToggle.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        <span class="theme-text">Modo Escuro</span>
+      `;
+      localStorage.setItem('theme', 'claro');
+    }
+  }
+
+  // Carregar tema inicial
+  const temaSalvo = localStorage.getItem('theme') || 'claro';
+  aplicarTema(temaSalvo);
+
+  themeToggle.addEventListener('click', () => {
+    const atual = document.documentElement.getAttribute('data-tema');
+    aplicarTema(atual === 'escuro' ? 'claro' : 'escuro');
+  });
+
+  // Modal de chamados
+  const modalOverlay = document.getElementById('modalOverlay');
+  const modalFormContent = document.getElementById('modalFormContent');
+  const formSuccess = document.getElementById('formSuccess');
+  const updateForm = document.getElementById('updateForm');
+
+  document.getElementById('floatBtn').addEventListener('click', () => {
+    if (modalFormContent && formSuccess) {
+      modalFormContent.style.display = 'block';
+      formSuccess.classList.remove('show');
+    }
+    modalOverlay.classList.add('show');
+  });
+  document.getElementById('modalClose').addEventListener('click', () => modalOverlay.classList.remove('show'));
+  modalOverlay.addEventListener('click', e => { if(e.target === modalOverlay) modalOverlay.classList.remove('show'); });
+
+  updateForm.addEventListener('submit', e => {
+    e.preventDefault();
+    
+    // Gerar número de protocolo/chamado (TVLAR-DDMMYY-RANDOM)
+    const data = new Date();
+    const d = String(data.getDate()).padStart(2, '0');
+    const m = String(data.getMonth() + 1).padStart(2, '0');
+    const y = String(data.getFullYear()).substring(2);
+    const rand = Math.floor(1000 + Math.random() * 9000);
+    const protocolo = `TVLAR-${d}${m}${y}-${rand}`;
+
+    const dados = {
+      protocolo: protocolo,
+      nome: document.getElementById('faqNome').value,
+      matricula: document.getElementById('faqMatricula').value,
+      loja: document.getElementById('faqLoja').value,
+      tipo: document.getElementById('faqTipo').value,
+      descricao: document.getElementById('faqDescricao').value
+    };
+
+    // Atualizar UI com o protocolo gerado
+    const protEl = document.getElementById('protocoloGerado');
+    if (protEl) protEl.textContent = protocolo;
+
+    const mensagem = `*Novo Chamado de Atendimento - TVLAR*\n\n` +
+      `*Protocolo:* ${protocolo}\n` +
+      `*Nome:* ${dados.nome}\n` +
+      `*Matrícula:* ${dados.matricula}\n` +
+      `*Loja:* ${dados.loja}\n` +
+      `*Tipo:* ${dados.tipo}\n` +
+      `*Descrição:* ${dados.descricao}\n\n` +
+      `*Prazo de Resposta (SLA):* Até 48 horas úteis (dias úteis).`;
+
+    const whatsappUrl = `https://wa.me/5592991587040?text=${encodeURIComponent(mensagem)}`;
+    
+    // Enviar para planilha se configurada
+    if (GOOGLE_WEBAPP_URL) {
+      fetch(GOOGLE_WEBAPP_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(dados)
+      }).catch(err => console.error("Erro ao salvar chamado no Google Planilhas:", err));
+    }
+
+    updateForm.reset();
+    if (modalFormContent && formSuccess) {
+      modalFormContent.style.display = 'none';
+      formSuccess.classList.add('show');
+    }
+    
+    window.open(whatsappUrl, '_blank');
+  });
+
+  // Lógica de alternância do Painel SAC
+  const adminToggle = document.getElementById('adminToggle');
+  const adminPasswordOverlay = document.getElementById('adminPasswordOverlay');
+  const adminLoginForm = document.getElementById('adminLoginForm');
+  const adminPasswordInput = document.getElementById('adminPassword');
+  const adminLoginError = document.getElementById('adminLoginError');
+  const adminPasswordClose = document.getElementById('adminPasswordClose');
+  const btnBackToFaq = document.getElementById('btnBackToFaq');
+  const adminPanel = document.getElementById('adminPanel');
+
+  const elementosFAQ = [
+    document.querySelector('.search-wrap'),
+    document.querySelector('.progress-container'),
+    document.querySelector('.history-container'),
+    document.querySelector('.export-buttons'),
+    document.getElementById('faqContainer'),
+    document.getElementById('noResults'),
+    document.getElementById('floatBtn')
+  ];
+
+  function alternarPainel(exibirAdmin) {
+    if (exibirAdmin) {
+      elementosFAQ.forEach(el => { if (el) el.style.display = 'none'; });
+      adminPanel.style.display = 'block';
+      carregarChamadosAdmin();
+    } else {
+      elementosFAQ.forEach(el => { if (el) el.style.display = ''; });
+      adminPanel.style.display = 'none';
+      document.getElementById('noResults').style.display = 'none';
+      filtrar(searchBox.value);
+    }
+  }
+
+  adminToggle.addEventListener('click', () => {
+    adminLoginError.style.display = 'none';
+    adminPasswordInput.value = '';
+    adminPasswordOverlay.classList.add('show');
+  });
+
+  adminPasswordClose.addEventListener('click', () => adminPasswordOverlay.classList.remove('show'));
+  adminPasswordOverlay.addEventListener('click', e => { if (e.target === adminPasswordOverlay) adminPasswordOverlay.classList.remove('show'); });
+
+  adminLoginForm.addEventListener('submit', e => {
+    e.preventDefault();
+    if (adminPasswordInput.value === 'tvlar123') { // Senha padrão do SAC
+      adminPasswordOverlay.classList.remove('show');
+      alternarPainel(true);
+    } else {
+      adminLoginError.style.display = 'block';
+      adminPasswordInput.select();
+    }
+  });
+
+  btnBackToFaq.addEventListener('click', () => alternarPainel(false));
+
+  // Filtros e Recarga do Painel
+  document.getElementById('adminSearchBox').addEventListener('input', filtrarChamadosAdmin);
+  document.getElementById('adminStatusFilter').addEventListener('change', filtrarChamadosAdmin);
+  document.getElementById('adminReloadBtn').addEventListener('click', carregarChamadosAdmin);
+
+  // Busca do FAQ
+  searchBox.addEventListener('input', e => filtrar(e.target.value));
+  document.getElementById('exportTXT').addEventListener('click', exportarTXT);
+  document.getElementById('exportPDF').addEventListener('click', exportarPDF);
+
+  atualizarProgresso();
+});
+</script>
+</body>
+</html>
